@@ -39,7 +39,7 @@ A share link usually looks something like this: **https://07ff8706ab.gradio.live
 
 Tip: Keep in mind that share links are publicly accessible, meaning that anyone can use your model for prediction! Therefore, make sure not to expose any sensitive information through the functions you write, or allow any critical changes to occur on your device. Or you can [add authentication to your Gradio app](#authentication) as discussed below.
 
-Note that by default, `share=False`, which means that your server is only running locally. (This is the default, except in Google Colab notebooks, where share links are automatically created). As an alternative to using share links, you can use use [SSH port-forwarding](https://www.ssh.com/ssh/tunneling/example) to share your local server with specific users.
+Note that by default, `share=False`, which means that your server is only running locally. (This is the default, except in Google Colab notebooks, where share links are automatically created). As an alternative to using share links, you can use [SSH port-forwarding](https://www.ssh.com/ssh/tunneling/example) to share your local server with specific users.
 
 
 ## Hosting on HF Spaces
@@ -83,7 +83,7 @@ Web components typically offer a better experience to users than IFrames. Web co
 
 To embed with Web Components:
 
-1. Import the gradio JS library into into your site by adding the script below in your site (replace {GRADIO_VERSION} in the URL with the library version of Gradio you are using).
+1. Import the gradio JS library into your site by adding the script below in your site (replace {GRADIO_VERSION} in the URL with the library version of Gradio you are using).
 
 ```html
 <script
@@ -121,7 +121,7 @@ You can see examples of how web components look <a href="https://www.gradio.app"
 You can also customize the appearance and behavior of your web component with attributes that you pass into the `<gradio-app>` tag:
 
 - `src`: as we've seen, the `src` attributes links to the URL of the hosted Gradio demo that you would like to embed
-- `space`: an optional shorthand if your Gradio demo is hosted on Hugging Face Space. Accepts a `username/space_name` instead of a full URL. Example: `gradio/Echocardiogram-Segmentation`. If this attribute attribute is provided, then `src` does not need to be provided.
+- `space`: an optional shorthand if your Gradio demo is hosted on Hugging Face Space. Accepts a `username/space_name` instead of a full URL. Example: `gradio/Echocardiogram-Segmentation`. If this attribute is provided, then `src` does not need to be provided.
 - `control_page_title`: a boolean designating whether the html title of the page should be set to the title of the Gradio app (by default `"false"`)
 - `initial_height`: the initial height of the web component while it is loading the Gradio app, (by default `"300px"`). Note that the final height is set based on the size of the Gradio app.
 - `container`: whether to show the border frame and information about where the Space is hosted (by default `"true"`)

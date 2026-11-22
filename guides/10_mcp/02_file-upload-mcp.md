@@ -2,7 +2,7 @@
 
 Tags: MCP, TOOL, LLM, SERVER, DOCS
 
-If you've tried to to use a remote Gradio MCP server that takes a file as input (image, video, audio), you've probably run into this error:
+If you've tried to use a remote Gradio MCP server that takes a file as input (image, video, audio), you've probably run into this error:
 
 <img src="https://huggingface.co/datasets/freddyaboulton/bucket/resolve/main/MCPError.png">
 

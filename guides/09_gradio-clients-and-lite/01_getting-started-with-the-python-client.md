@@ -301,7 +301,7 @@ for o in job:
 >> 2
 ```
 
-You can also cancel jobs that that have iterative outputs, in which case the job will finish as soon as the current iteration finishes running.
+You can also cancel jobs that have iterative outputs, in which case the job will finish as soon as the current iteration finishes running.
 
 ```py
 from gradio_client import Client
@@ -334,7 +334,7 @@ with gr.Blocks() as demo:
 demo.launch()
 ```
 
-If you were to connect this this Gradio app using the Python Client, you would notice that the API information only shows a single input and output:
+If you were to connect this Gradio app using the Python Client, you would notice that the API information only shows a single input and output:
 
 ```csv
 Client.predict() Usage Info

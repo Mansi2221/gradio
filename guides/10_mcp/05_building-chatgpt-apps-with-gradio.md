@@ -21,7 +21,7 @@ We will walk through the steps in more detail below.
 pip install --upgrade gradio[mcp]
 ```
 
-Now, let's walk through two examples of how you can build build ChatGPT apps with Gradio. 
+Now, let's walk through two examples of how you can build ChatGPT apps with Gradio. 
 
 ### Example 1: Letter Counter App
 

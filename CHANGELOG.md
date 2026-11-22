@@ -476,7 +476,7 @@
 - [#13213](https://github.com/gradio-app/gradio/pull/13213) [`457f130`](https://github.com/gradio-app/gradio/commit/457f130b310ac087fdc6ba7dbbc7fa78e0bcccf8) - Gallery Unit Tests.  Thanks @freddyaboulton!
 - [#13218](https://github.com/gradio-app/gradio/pull/13218) [`3a30ef6`](https://github.com/gradio-app/gradio/commit/3a30ef6b0001ea4c8c23b4301cdd83090345d989) - Add comprehensive DateTime tests and fix whitespace preprocess bug.  Thanks @pngwn!
 - [#13185](https://github.com/gradio-app/gradio/pull/13185) [`ffc00ff`](https://github.com/gradio-app/gradio/commit/ffc00ff4cf23641e90f0963cec6ed52f85ed511c) - Annotated image unit tests.  Thanks @freddyaboulton!
-- [#13176](https://github.com/gradio-app/gradio/pull/13176) [`45c4ecd`](https://github.com/gradio-app/gradio/commit/45c4ecd25fc83c7ee0210d216df1bc4bd509e622) - Add `@gr.cache()` decorator for caching deterministic functions, as as well as a lower-level `gr.Cache` that uses dependency injection.  Thanks @abidlabs!
+- [#13176](https://github.com/gradio-app/gradio/pull/13176) [`45c4ecd`](https://github.com/gradio-app/gradio/commit/45c4ecd25fc83c7ee0210d216df1bc4bd509e622) - Add `@gr.cache()` decorator for caching deterministic functions, as well as a lower-level `gr.Cache` that uses dependency injection.  Thanks @abidlabs!
 - [#13205](https://github.com/gradio-app/gradio/pull/13205) [`348327f`](https://github.com/gradio-app/gradio/commit/348327f6d7014feaf3f0b4cfb7e2653a1078ea33) - fix : check validation_response instead of validation_data.  Thanks @nameearly!
 
 ### Fixes

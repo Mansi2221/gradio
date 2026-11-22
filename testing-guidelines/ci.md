@@ -176,7 +176,7 @@ ok.
 
 ### Technical details
 
-Most our our workflows are contained within the repository but we also have some custom JavaScript actions that are stored in the [gradio-app/github](https://github.com/gradio-app/github) repository. These actions will be mentioned below but I'll put a list here for ease of navigation:
+Most of our workflows are contained within the repository but we also have some custom JavaScript actions that are stored in the [gradio-app/github](https://github.com/gradio-app/github) repository. These actions will be mentioned below but I'll put a list here for ease of navigation:
 
 - [`find-pr`](https://github.com/gradio-app/github/tree/main/packages/find-pr) - for getting a pr number, pr branch, and other metadata for a `workflow_run`.
 - [`comment-pr`](https://github.com/gradio-app/github/tree/main/packages/comment-pr) - for creating and updating comments on a pull request.
@@ -304,7 +304,7 @@ We use [`changesets`](https://github.com/changesets/changesets) for versioning a
   - This is partly so that we can tweak the ouput, but mainly so that we can use this as a hook to store some structured data about each changeset.
 - We run a script to regenerate the chnagelogs in the format we want them to be in. We use the structure data we gather in the previous step to customise the changelog format.
 - We have added `package.json`s to our python packages, which allows changesets to track them as if they were JavaScript pacakges and bump their version in line with everything else
-- We have accept an optional `main_changeset: true | false` field on the package.json of any packge. This allows to easy figure out if changes to this package should be considered changes to the main Gradio package. We cannot do this only via tracking dependencies because we want the changelog entries for these packages to actually appear in the Gradio changelog. If we were to only use dependencies to manage this we would only get an unhelpful "dependencies updated" message in the changelog of our main library.
+- We have accept an optional `main_changeset: true | false` field on the package.json of any package. This allows to easy figure out if changes to this package should be considered changes to the main Gradio package. We cannot do this only via tracking dependencies because we want the changelog entries for these packages to actually appear in the Gradio changelog. If we were to only use dependencies to manage this we would only get an unhelpful "dependencies updated" message in the changelog of our main library.
 
 Publishig itself is also a little different. `changesets` is only set up to publish `npm` packages, so we use the standard changeset GitHub action to do this and we use its `hasChangesets` output to decide whether or not publish to pypi. If `main` `hasChangesets` then we do not want to publish (because that means we haven't bumped the version and deleted the changeset files yet). When we do want to publish, we use [another custom action](https://github.com/gradio-app/github/tree/main/packages/publish-pypi) that does exactly that. This actually will take dependencies between packages into account when deciding which order to publish in (in case of failures) and allows each package being published to define a `build_pypi.sh` script that will be run prior to publishing, this typically builds the wheel.
 
@@ -418,7 +418,7 @@ The solution is to set the check as required in the repo settings and then do th
 
 - If the job runs then the commit status is set to pending prior to the run.
 - If the job fails then the commit status should be set to failed.
-- If the job succeeded then then commit status should be set to success.
+- If the job succeeded then commit status should be set to success.
 - If the job does not need to run then it should be set to success with some text explaining it was skipped.
 
 Determining what has changed is straightforward, we use a third-party action for this, but we also need to somehow prevent a workflow from running after we have started it, conceptually at least.

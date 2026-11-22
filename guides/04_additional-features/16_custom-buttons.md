@@ -80,4 +80,4 @@ $code_textbox_custom_buttons
 - Only the `value` of the Button is used, other attributes like `icon` are not used.
 - Buttons are rendered in the order they appear in the `buttons` list
 - Built-in buttons (like "copy", "download") can be hidden by omitting them from the list
-- Custom buttons work with component events in the same way as as regular buttons
+- Custom buttons work with component events in the same way as regular buttons
